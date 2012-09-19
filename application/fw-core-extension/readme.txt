@@ -1,0 +1,1 @@
+If you want to extend a core class please remove the "-sample" from the file name. 

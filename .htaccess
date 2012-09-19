@@ -1,0 +1,17 @@
+#php_flag magic_quotes_gpc off
+
+Options -Indexes
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} ^.+\.php$
+RewriteCond %{REQUEST_FILENAME} !.*index\.php$
+RewriteCond %{REQUEST_FILENAME} !.*access-denied\.php$
+RewriteCond %{REQUEST_FILENAME} !.*batchJS\.php$
+RewriteCond %{REQUEST_FILENAME} !.*batchCSS\.php$
+RewriteRule ^(.*)$ access-denied.php [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url_path=$1 [L,QSA]

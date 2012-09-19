@@ -1,0 +1,3 @@
+LEFT SIDE
+<?php
+?>
