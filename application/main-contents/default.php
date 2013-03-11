@@ -11,8 +11,7 @@ afc::registerFunction("testAfc");
  */
 echo "MAIN CONTENT";
 
-//View::setTitle("aas");
-//View::setPageTitle("aaaa");
+View::setPageTitle(Sys::cfgItem("siteName"));
 
 //Model::get("test")->objectMethod();
 //Model::get("test")->objectMethod();
