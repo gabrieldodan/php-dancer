@@ -9,7 +9,7 @@ afc::registerFunction("testAfc");
 <input type="button" onclick="Pd.afc.call('testAfc', 'param1=1&param2=2', function(){})" value="Call" />
 <?php
  */
-echo "qqqq";
+echo "MAIN CONTENT";
 
 //View::setTitle("aas");
 //View::setPageTitle("aaaa");
