@@ -173,6 +173,9 @@ class WorkflowBase {
 			HooksManager::runHookActions(Workflow::HOOK_OUTPUT_FLUSH_START);
 		}
 		
+		/* gzip content */
+		ini_set("zlib.output_compression", "On");
+        
 		if ( Sys::cfgItem("enableETagMechanism") === TRUE ) {
 			$etag = md5( ob_get_contents() . View::$pageContent );  
 			if ( isset($_SERVER['HTTP_IF_NONE_MATCH']) && $_SERVER['HTTP_IF_NONE_MATCH'] == $etag ) {
@@ -188,8 +191,6 @@ class WorkflowBase {
 			echo View::$pageContent;
 		}
 		
-		/* gzip content */
-		ini_set("zlib.output_compression", "On");
 	}
 	
 	static public function run() {
