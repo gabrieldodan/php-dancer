@@ -70,8 +70,8 @@ $config['rewrite-rules'][] = array(
  */
 /*SAMPLE 
 $config['autoload-libraries'] = array(
-	array("Library1Name", FALSE, $params),
-	array("Library2Name", TRUE, $params)
+	array("Library1Name", "app", $params),
+	array("Library2Name", "sys", $params)
 );
 */
 ?>
